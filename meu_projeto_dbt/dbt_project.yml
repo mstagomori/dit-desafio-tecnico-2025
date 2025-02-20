@@ -1,0 +1,27 @@
+name: "meu_projeto_dbt"
+version: "1.0"
+config-version: 2
+
+profile: "meu_projeto_dbt"
+
+model-paths: ["desafio/models"]
+test-paths: ["desafio/tests"]
+docs-paths: ["docs"]
+analysis-paths: ["desafio/analysis"]
+macro-paths: ["desafio/macros"]
+seed-paths: ["desafio/seeds"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  meu_projeto_dbt:
+    +materialized: table
+    threads: 1 # Definição correta dentro da configuração de models
+
+seeds:
+  meu_projeto_dbt:
+    +schema: raw_data # Define um schema específico para os dados brutos

@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: dbt_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: dbt_user
+      POSTGRES_PASSWORD: dbt_password
+      POSTGRES_DB: dbt_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  dbt:
+    build: .
+    container_name: dbt_runner
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    environment:
+      DBT_PROFILES_DIR: /app
+    stdin_open: true
+    tty: true
+
+volumes:
+  postgres_data:

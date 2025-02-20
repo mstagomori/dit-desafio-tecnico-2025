@@ -1,0 +1,173 @@
+version: 2
+
+models:
+  - name: ingestao
+    description: "Modelo para limpar e transformar dados dos pacientes antes de carregar no PostgreSQL."
+    columns:
+      - name: id_paciente
+        description: "ID único do paciente."
+        tests:
+          - not_null
+          - unique
+
+      - name: sexo
+        description: "Sexo do paciente (exemplo: 'Masculino', 'Feminino')."
+        tests:
+          - not_null
+
+      - name: obito
+        description: "Indica se o paciente faleceu (True ou False)."
+
+      - name: bairro
+        description: "Bairro de residência do paciente."
+        tests:
+          - not_null
+      - name: raca_cor
+        description: "Raça ou cor do paciente."
+        tests:
+          - not_null
+
+      - name: ocupacao
+        description: "Ocupação ou profissão do paciente."
+        tests:
+          - not_null
+
+      - name: religiao
+        description: "Religião do paciente."
+        tests:
+          - not_null
+
+      - name: luz_eletrica
+        description: "Indica se o paciente tem acesso a luz elétrica (True ou False)."
+        tests:
+          - not_null
+
+      - name: data_cadastro
+        description: "Data de cadastro do paciente."
+        tests:
+          - not_null
+
+      - name: escolaridade
+        description: "Nível de escolaridade do paciente."
+        tests:
+          - not_null
+
+      - name: nacionalidade
+        description: "Nacionalidade do paciente."
+        tests:
+          - not_null
+
+      - name: renda_familiar
+        description: "Renda familiar do paciente."
+        tests:
+          - not_null
+
+      - name: data_nascimento
+        description: "Data de nascimento do paciente."
+        tests:
+          - not_null
+
+      - name: em_situacao_de_rua
+        description: "Indica se o paciente está em situação de rua (True ou False)."
+        tests:
+          - not_null
+
+      - name: frequenta_escola
+        description: "Indica se o paciente frequenta escola (True ou False)."
+        tests:
+          - not_null
+
+      - name: meios_transporte
+        description: "Meios de transporte utilizados pelo paciente."
+        tests:
+          - not_null
+
+      - name: doencas_condicoes
+        description: "Doenças e condições de saúde do paciente."
+        tests:
+          - not_null
+
+      - name: identidade_genero
+        description: "Identidade de gênero do paciente."
+        tests:
+          - not_null
+
+      - name: meios_comunicacao
+        description: "Meios de comunicação utilizados pelo paciente."
+        tests:
+          - not_null
+
+      - name: possui_plano_saude
+        description: "Indica se o paciente possui plano de saúde (True ou False)."
+        tests:
+          - not_null
+
+      - name: em_caso_doenca_procura
+        description: "Onde o paciente procura tratamento em caso de doença."
+        tests:
+          - not_null
+
+      - name: situacao_profissional
+        description: "Situação profissional do paciente."
+        tests:
+          - not_null
+
+      - name: vulnerabilidade_social
+        description: "Indica se o paciente está em situação de vulnerabilidade social (True ou False)."
+        tests:
+          - not_null
+
+      - name: data_atualizacao_cadastro
+        description: "Data da última atualização do cadastro do paciente."
+        tests:
+          - not_null
+
+      - name: familia_beneficiaria_auxilio_brasil
+        description: "Indica se a família do paciente é beneficiária do Auxílio Brasil (True ou False)."
+        tests:
+          - not_null
+
+      - name: crianca_matriculada_creche_pre_escola
+        description: "Indica se a criança está matriculada em creche ou pré-escola (True ou False)."
+        tests:
+          - not_null
+
+      - name: altura
+        description: "Altura do paciente em metros."
+        tests:
+          - not_null
+
+      - name: peso
+        description: "Peso do paciente em quilogramas."
+        tests:
+          - not_null
+
+      - name: pressao_sistolica
+        description: "Pressão sistólica do paciente."
+        tests:
+          - not_null
+
+      - name: pressao_diastolica
+        description: "Pressão diastólica do paciente."
+        tests:
+          - not_null
+
+      - name: n_atendimentos_atencao_primaria
+        description: "Número de atendimentos do paciente na atenção primária."
+        tests:
+          - not_null
+
+      - name: n_atendimentos_hospital
+        description: "Número de atendimentos hospitalares do paciente."
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: "Data e hora da última atualização do registro."
+        tests:
+          - not_null
+
+      - name: tipo
+        description: "Tipo de registro (ex: 'Paciente', 'Acompanhamento')."
+        tests:
+          - not_null
