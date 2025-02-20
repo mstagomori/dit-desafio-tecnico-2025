@@ -1,4 +1,4 @@
-# Documentação do Projeto
+# Desafio Técnico para Cientista de Dados
 
 Este documento fornece instruções sobre como configurar e executar o projeto usando Docker, além de executar os comandos `dbt seed` e `dbt run`.
 
