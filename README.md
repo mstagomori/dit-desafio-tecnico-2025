@@ -16,13 +16,14 @@ A análise foi feita utilizando Python e Pandas. O relatório está em `analise/
 1. **Clone o repositório do projeto:**
 
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/mstagomori/dit-desafio-tecnico-2025.git
+   cd dit-desafio-tecnico-2025
    cd meu_projeto_dbt
    ```
 
 2. **Construa a imagem Docker:**
 
-   2.1. No diretório raiz do projeto, execute o seguinte comando para construir a imagem Docker:
+   2.1. Dentro de meu_projeto_dbt, execute o seguinte comando para construir os containers Docker:
 
    ```bash
    docker-compose up --build -d
